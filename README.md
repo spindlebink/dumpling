@@ -25,7 +25,7 @@ path/to/dumpling in_file out_file -m CrystalModuleName -n "Note at top of code"
 You can also pass `--help` to get a list of all options.
 
 The in file will be processed and converted into Crystal code (or raw Base64 with `-r`, although I'm not sure whether that's useful for anyone), which can then be imported into your program at compile time:
-```
+```crystal
 require "./packed_font_file.cr"
 
 def load
