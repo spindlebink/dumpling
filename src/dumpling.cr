@@ -6,8 +6,8 @@ require "compress/gzip"
 VERSION = "0.1.0"
 
 CODE_TEMPLATE =
-%(# 
-# Generated via Dumpling v#{VERSION} (https://github.com/obviousscholar/dumpling)
+  %(#
+# Generated via Dumpling v#{VERSION} (https://github.com/spindlebink/dumpling)
 # Be kind; make cool stuff.
 # ##NOTE##
 
@@ -16,7 +16,7 @@ require "compress/gzip"
 
 module ##MODULE_NAME##
   extend self
-  DATA_STRING = "##DATA_STRING_CONTENTS##"
+  private DATA_STRING = "##DATA_STRING_CONTENTS##"
 
   def unpack
     gzip_bytes = IO::Memory.new(Base64.decode(DATA_STRING))
